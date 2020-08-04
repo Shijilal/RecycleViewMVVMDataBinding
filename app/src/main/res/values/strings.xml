@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RecycleViewMVVMDataBinding</string>
+    <string name="recycleview_mvvm_databinding">RecycleView MVVM Databinding</string>
+    <string name="name">name</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="location">Location</string>
+</resources>

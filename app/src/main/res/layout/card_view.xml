@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="mUser"
+            type="com.lalsoft.recycleviewmvvmdatabinding.model.User"/>
+    </data>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardViewCV01"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.5"
+    app:cardCornerRadius="6dp"
+    android:padding="20dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCV01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E8F5E9"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewCV01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:hint="@string/name"
+                android:text="@{mUser.name}"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewCV02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/nick_name"
+                android:text='@{mUser.nickName}' />
+
+            <TextView
+                android:id="@+id/textViewCV03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/location"
+                android:text='@{mUser.district}' />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#87000000" />
+
+            <TextView
+                android:id="@+id/textViewCV04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/location"
+                android:text='@{mUser.state}' />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
