@@ -32,7 +32,7 @@
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
-
+                app.setAdapter="@{viewModel.getAdapter()}"
                 android:id="@+id/recyclerViewRV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

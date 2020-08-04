@@ -9,7 +9,7 @@ import com.lalsoft.recycleviewmvvmdatabinding.databinding.CardViewBinding
 import com.lalsoft.recycleviewmvvmdatabinding.model.User
 
 class RecycleAdapter() :RecyclerView.Adapter<RecycleAdapter.GenericViewHolder>(){
-    private val userArrayList:ArrayList<User> = ArrayList()
+    private lateinit var userArrayList :ArrayList<*>
     inner class GenericViewHolder(val cardViewBinding: CardViewBinding):
         RecyclerView.ViewHolder(cardViewBinding.root){
 
@@ -25,6 +25,11 @@ class RecycleAdapter() :RecyclerView.Adapter<RecycleAdapter.GenericViewHolder>()
     override fun getItemCount(): Int =userArrayList.size
 
     override fun onBindViewHolder(holder: GenericViewHolder, position: Int) {
-        holder.cardViewBinding.mUser=userArrayList[position]
+        holder.cardViewBinding.mUser= userArrayList[position] as User?
+    }
+
+    fun setUserList(userList: ArrayList<*>) {
+        this.userArrayList = userList
+        notifyDataSetChanged()
     }
 }
