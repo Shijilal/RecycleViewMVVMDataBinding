@@ -4,7 +4,7 @@
     <data>
         <variable
             name="mUser"
-            type="com.lalsoft.recycleviewmvvmdatabinding.model.User"/>
+            type="com.lalsoft.recyclerviewmvvmdatabinding.model.User"/>
     </data>
 <androidx.cardview.widget.CardView
     android:id="@+id/cardViewCV01"

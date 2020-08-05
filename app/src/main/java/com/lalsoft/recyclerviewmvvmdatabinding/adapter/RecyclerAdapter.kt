@@ -1,14 +1,14 @@
-package com.lalsoft.recycleviewmvvmdatabinding.adapter
+package com.lalsoft.recyclerviewmvvmdatabinding.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.lalsoft.recycleviewmvvmdatabinding.R
-import com.lalsoft.recycleviewmvvmdatabinding.databinding.CardViewBinding
-import com.lalsoft.recycleviewmvvmdatabinding.model.User
+import com.lalsoft.recyclerviewmvvmdatabinding.R
+import com.lalsoft.recyclerviewmvvmdatabinding.databinding.CardViewBinding
+import com.lalsoft.recyclerviewmvvmdatabinding.model.User
 
-class RecycleAdapter() :RecyclerView.Adapter<RecycleAdapter.GenericViewHolder>(){
+class RecyclerAdapter() :RecyclerView.Adapter<RecyclerAdapter.GenericViewHolder>(){
     private lateinit var userArrayList :ArrayList<*>
     inner class GenericViewHolder(val cardViewBinding: CardViewBinding):
         RecyclerView.ViewHolder(cardViewBinding.root){

@@ -1,4 +1,4 @@
-package com.lalsoft.recycleviewmvvmdatabinding
+package com.lalsoft.recyclerviewmvvmdatabinding
 
 import org.junit.Test
 

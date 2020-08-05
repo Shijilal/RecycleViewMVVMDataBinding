@@ -1,4 +1,4 @@
-package com.lalsoft.recycleviewmvvmdatabinding
+package com.lalsoft.recyclerviewmvvmdatabinding
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

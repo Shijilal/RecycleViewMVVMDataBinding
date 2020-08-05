@@ -1,4 +1,4 @@
-package com.lalsoft.recycleviewmvvmdatabinding.data
+package com.lalsoft.recyclerviewmvvmdatabinding.data
 
 class Repository {
     private val userDao=UserDao()

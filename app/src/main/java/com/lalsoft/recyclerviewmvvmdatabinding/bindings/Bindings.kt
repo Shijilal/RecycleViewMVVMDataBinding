@@ -1,4 +1,4 @@
-package com.lalsoft.recycleviewmvvmdatabinding.bindings
+package com.lalsoft.recyclerviewmvvmdatabinding.bindings
 
 import android.view.View
 import androidx.databinding.BindingAdapter

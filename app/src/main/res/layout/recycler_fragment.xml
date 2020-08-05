@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.lalsoft.recycleviewmvvmdatabinding.viewmodel.RecycleViewModel" />
+            type="com.lalsoft.recyclerviewmvvmdatabinding.viewmodel.RecyclerViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

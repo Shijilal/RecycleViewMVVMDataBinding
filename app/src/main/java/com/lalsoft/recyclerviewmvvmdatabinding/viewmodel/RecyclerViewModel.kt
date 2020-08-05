@@ -1,17 +1,17 @@
-package com.lalsoft.recycleviewmvvmdatabinding.viewmodel
+package com.lalsoft.recyclerviewmvvmdatabinding.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.lalsoft.recycleviewmvvmdatabinding.adapter.RecycleAdapter
-import com.lalsoft.recycleviewmvvmdatabinding.data.Repository
-import com.lalsoft.recycleviewmvvmdatabinding.model.User
+import com.lalsoft.recyclerviewmvvmdatabinding.adapter.RecyclerAdapter
+import com.lalsoft.recyclerviewmvvmdatabinding.data.Repository
+import com.lalsoft.recyclerviewmvvmdatabinding.model.User
 
-class RecycleViewModel : ViewModel() {
+class RecyclerViewModel : ViewModel() {
     private val repository by lazy { Repository() }
 
-    private val _adapter: MutableLiveData<RecycleAdapter> = MutableLiveData()
-    val adapter: LiveData<RecycleAdapter>
+    private val _adapter: MutableLiveData<RecyclerAdapter> = MutableLiveData()
+    val adapter: LiveData<RecyclerAdapter>
         get() = _adapter
     private val _userList: MutableLiveData<ArrayList<*>> = MutableLiveData()
     val userList: LiveData<ArrayList<*>>
@@ -20,7 +20,7 @@ class RecycleViewModel : ViewModel() {
 
     init {
         _userList.value = repository.getUserList()
-        _adapter.value=RecycleAdapter()
+        _adapter.value=RecyclerAdapter()
     }
 
     fun setAdapter(users: ArrayList<User>) {

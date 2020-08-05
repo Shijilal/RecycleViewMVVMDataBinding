@@ -1,6 +1,6 @@
-package com.lalsoft.recycleviewmvvmdatabinding.data
+package com.lalsoft.recyclerviewmvvmdatabinding.data
 
-import com.lalsoft.recycleviewmvvmdatabinding.model.User
+import com.lalsoft.recyclerviewmvvmdatabinding.model.User
 
 class UserDao {
     fun getUserArray():ArrayList<User>{

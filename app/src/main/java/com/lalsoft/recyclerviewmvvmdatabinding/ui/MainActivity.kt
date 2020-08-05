@@ -1,8 +1,8 @@
-package com.lalsoft.recycleviewmvvmdatabinding.ui
+package com.lalsoft.recyclerviewmvvmdatabinding.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.lalsoft.recycleviewmvvmdatabinding.R
+import com.lalsoft.recyclerviewmvvmdatabinding.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                    RecycleFragment()).commit()
+                    RecyclerFragment()).commit()
         }
     }
 }
