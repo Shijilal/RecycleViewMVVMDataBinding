@@ -32,16 +32,15 @@ class RecycleFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel=ViewModelProvider(this).get(RecycleViewModel::class.java)
         viewModel.userList.observe(viewLifecycleOwner,userListObserver)
+        viewModel.adapter.observe(viewLifecycleOwner,adapterObserver)
 
 
 
     }
+    private val adapterObserver= Observer<RecycleAdapter> {
+        dataBinding.viewModel=viewModel
+    }
     private val userListObserver=Observer<ArrayList<*>>{
-        val recyclerView =dataBinding.recyclerViewRV
-        recyclerView.layoutManager = GridLayoutManager(context,2,LinearLayoutManager.VERTICAL,false)
-        //recyclerView.layoutManager = LinearLayoutManager(context)
-        val adapter=RecycleAdapter()
-        adapter.setUserList(it)
-        recyclerView.adapter = adapter
+        viewModel.setAdapter(it as ArrayList<User>)
     }
 }

@@ -15,8 +15,8 @@ object Bindings {
     @BindingAdapter("setAdapter") @JvmStatic
     fun bindRecyclerViewAdapter(recyclerView: RecyclerView, adapter: RecyclerView.Adapter<*>?) {
         recyclerView.setHasFixedSize(true)
-        //recyclerView.layoutManager = GridLayoutManager(recyclerView.context,2,LinearLayoutManager.VERTICAL,false)
-        recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
+        recyclerView.layoutManager = GridLayoutManager(recyclerView.context,2,LinearLayoutManager.VERTICAL,false)
+        //recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
         recyclerView.adapter = adapter
     }
 

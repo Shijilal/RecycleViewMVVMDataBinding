@@ -10,8 +10,6 @@ import com.lalsoft.recycleviewmvvmdatabinding.model.User
 class RecycleViewModel : ViewModel() {
     private val repository by lazy { Repository() }
 
-    //    var adapter:RecycleAdapter?=null
-//    private set
     private val _adapter: MutableLiveData<RecycleAdapter> = MutableLiveData()
     val adapter: LiveData<RecycleAdapter>
         get() = _adapter
@@ -22,7 +20,13 @@ class RecycleViewModel : ViewModel() {
 
     init {
         _userList.value = repository.getUserList()
-        //_adapter.value?.setUserList(userList)
+        _adapter.value=RecycleAdapter()
+    }
+
+    fun setAdapter(users: ArrayList<User>) {
+        _adapter.value!!.setUserList(users)
+        _adapter.value!!.notifyDataSetChanged()
+
     }
 
 }
